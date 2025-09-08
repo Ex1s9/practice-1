@@ -118,6 +118,30 @@ phoneInput?.addEventListener('input', () => {
     phoneInput.value = parts.join('');
 });
 
+const themeToggle = document.querySelector('.theme-toggle');
+const THEME_KEY = 'theme';
+
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem(THEME_KEY);
+
+function initTheme() {
+    const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+
+    if (isDark) {
+        document.body.classList.add('theme-dark');
+        themeToggle?.setAttribute('aria-pressed', 'true');
+    }
+}
+
+function toggleTheme() {
+    const isDark = document.body.classList.toggle('theme-dark');
+    themeToggle?.setAttribute('aria-pressed', String(isDark));
+    localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
+}
+
+initTheme();
+themeToggle?.addEventListener('click', toggleTheme);
+
 dialog.addEventListener('cancel', (e) => {
     const formData = new FormData(form);
     let hasData = false;

@@ -12,20 +12,41 @@
 </head>
 
 <body>
-     <header class="header">
-          <nav class="nav">
-               <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link nav__link--active">О нас</a></li>
-                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-               </ul>
-          </nav>
+     <header class="site-header">
+          <div class="container">
+               <a class="site-header__brand" href="index.html">
+                    Наша Компания
+               </a>
+               
+               <nav class="site-nav" aria-label="Основная навигация">
+                    <ul class="site-nav__list">
+                         <li class="site-nav__item">
+                              <a class="site-nav__link" href="index.html">Главная</a>
+                         </li>
+                         <li class="site-nav__item">
+                              <a class="site-nav__link site-nav__link--current" href="about.html">О нас</a>
+                         </li>
+                         <li class="site-nav__item">
+                              <a class="site-nav__link" href="contacts.html">Контакты</a>
+                         </li>
+                         <li class="site-nav__item">
+                              <a class="site-nav__link site-nav__link--cta" href="index.html#contact-form">Связаться</a>
+                         </li>
+                    </ul>
+               </nav>
+          </div>
      </header>
 
      <main class="main">
-          <nav aria-label="Хлебные крошки" class="breadcrumb">
-               <a href="index.html" class="breadcrumb__link">Главная</a> →
-               <span class="breadcrumb__current">О нас</span>
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+               <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                         <a class="breadcrumbs__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+                         О нас
+                    </li>
+               </ol>
           </nav>
 
           <h1 class="main__title">Информация об организации</h1>
