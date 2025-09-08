@@ -4,4 +4,4 @@
 Этот репозиторий является каркасом для будущего веб-приложения.
 
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://github.com/Ex1s9/practice-1?tab=readme-ov-file)
+- [Публичная страница на GitHub Pages](https://ex1s9.github.io/practice-1/src/)
