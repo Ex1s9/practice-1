@@ -12,21 +12,113 @@
 </head>
 
 <body>
-     <header class="header">
-          <nav class="nav">
-               <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link nav__link--active">Главная</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">О нас</a></li>
-                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-               </ul>
-          </nav>
+     <header class="site-header">
+          <div class="container">
+               <a class="site-header__brand" href="index.html">
+                    Наша Компания
+               </a>
+               
+               <nav class="site-nav" aria-label="Основная навигация">
+                    <ul class="site-nav__list">
+                         <li class="site-nav__item">
+                              <a class="site-nav__link site-nav__link--current" href="index.html">Главная</a>
+                         </li>
+                         <li class="site-nav__item">
+                              <a class="site-nav__link" href="about.html">О нас</a>
+                         </li>
+                         <li class="site-nav__item">
+                              <a class="site-nav__link" href="contacts.html">Контакты</a>
+                         </li>
+                         <li class="site-nav__item">
+                              <a class="site-nav__link site-nav__link--cta" href="#contact-form">Связаться</a>
+                         </li>
+                    </ul>
+                    <button class="theme-toggle" type="button" aria-pressed="false" title="Переключить тему">
+                         <span class="theme-toggle__icon">🌙</span>
+                         <span class="theme-toggle__text">Тёмная тема</span>
+                    </button>
+               </nav>
+          </div>
      </header>
 
      <main class="main">
           <h1 class="main__title">Наша компания</h1>
-          <p class="main__text">Добро пожаловать на наш сайт!</p>
+          <div class="hero">
+               <h2 class="hero__title">Мы создаём цифровое будущее</h2>
+               <p class="hero__subtitle">Инновационные решения для вашего бизнеса</p>
+          </div>
 
-          <button id="openDialog" type="button" class="button button--primary">Написать нам</button>
+          <section class="section">
+               <div class="content">
+                    <h2 class="section__title">Наши проекты</h2>
+                    <p class="section__content">Мы гордимся нашими работами и достижениями в области информационных технологий.</p>
+               </div>
+          </section>
+
+          <section class="section section--alt">
+               <div class="media">
+                    <video 
+                         class="media__video" 
+                         controls 
+                         preload="metadata" 
+                         playsinline
+                         width="960" 
+                         height="540" 
+                         poster="video/poster.jpg">
+                         <source src="video/demo-1080.mp4" type="video/mp4">
+                         <source src="video/demo-720.webm" type="video/webm">
+                         <track 
+                              kind="captions" 
+                              srclang="ru" 
+                              src="video/captions-ru.vtt" 
+                              label="Русские субтитры" 
+                              default>
+                         Ваш браузер не поддерживает видео.
+                    </video>
+               </div>
+          </section>
+
+          <div id="contact-form">
+               <button id="openDialog" type="button" class="button button--primary">Написать нам</button>
+          </div>
+
+          <section class="section section--alt">
+               <div class="content">
+                    <h2 class="section__title">Наши услуги</h2>
+                    <div class="cards">
+                         <div class="card">
+                              <img 
+                                   class="card__image"
+                                   src="img/project-640.jpg" 
+                                   srcset="img/project-640.jpg 640w, img/project-960.jpg 960w, img/project-1280.jpg 1280w"
+                                   sizes="(max-width: 700px) 92vw, (max-width: 1200px) 640px, 960px"
+                                   alt="Проект: разработка веб-сайта" 
+                                   width="640" 
+                                   height="360"
+                                   loading="lazy">
+                              <h3 class="card__title">Веб-разработка</h3>
+                              <p class="card__text">Создаем современные и функциональные веб-сайты для вашего бизнеса.</p>
+                         </div>
+                         <div class="card">
+                              <img 
+                                   class="card__image"
+                                   src="img/mobile-640.jpg" 
+                                   srcset="img/mobile-640.jpg 640w, img/mobile-960.jpg 960w, img/mobile-1280.jpg 1280w"
+                                   sizes="(max-width: 700px) 92vw, (max-width: 1200px) 640px, 960px"
+                                   alt="Проект: разработка мобильного приложения" 
+                                   width="640" 
+                                   height="360"
+                                   loading="lazy">
+                              <h3 class="card__title">Мобильные приложения</h3>
+                              <p class="card__text">Разрабатываем мобильные приложения для iOS и Android платформ.</p>
+                         </div>
+                         <div class="card">
+                              <h3 class="card__title">Консалтинг</h3>
+                              <p class="card__text">Предоставляем экспертные консультации по цифровой трансформации.</p>
+                         </div>
+                    </div>
+               </div>
+          </section>
      </main>
 
      <footer class="footer">
